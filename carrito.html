@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carrito | Midnight Café</title>
+
+<link rel="icon" href="Imagenes/logo.jpg">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos.CSS">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+<div class="container">
+
+
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+    <img
+    src="Imagenes/logo.jpg"
+    alt="Logo Midnight Café"
+    class="logo-navbar">
+
+    <span class="ms-2">
+        Midnight Café
+    </span>
+
+    </a>
+
+</div>
+
+</nav>
+
+<div class="container py-5">
+
+<h1 class="mb-4">
+
+<i class="bi bi-cart-fill"></i>
+
+Carrito de Compras
+
+</h1>
+
+<div class="row">
+
+<div class="col-lg-8">
+
+<div id="listaCarrito">
+
+</div>
+
+<button
+class="btn btn-danger mt-3"
+onclick="vaciarCarrito()">
+
+Vaciar Carrito
+
+</button>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="cart-total">
+
+<h4>Resumen</h4>
+
+<hr>
+
+<p>
+
+Subtotal:
+<strong id="subtotal">
+$0.00
+</strong>
+
+</p>
+
+<p>
+
+IVA (15%):
+<strong id="iva">
+$0.00
+</strong>
+
+</p>
+
+<hr>
+
+<p>
+
+Total:
+<strong id="total">
+$0.00
+</strong>
+
+</p>
+
+<a
+href="pagos.html"
+class="btn btn-success w-100">
+
+Proceder al Pago
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="Imagenes/logo.jpg">
+
+<title>Midnight Café</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+    <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+    <img
+    src="Imagenes/logo.jpg"
+    alt="Logo Midnight Café"
+    class="logo-navbar">
+
+    <span class="ms-2">
+        Midnight Café
+    </span>
+
+</a>
+
+    <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#menu">
+
+    <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+
+    <ul class="navbar-nav ms-auto">
+
+    <li class="nav-item">
+    <a class="nav-link active" href="index.html">Inicio</a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="menu.html">Menú</a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="carrito.html">
+    Carrito
+    <span id="contadorCarrito" class="badge bg-danger">0</span>
+    </a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="pagos.html">Pagos</a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="nosotros.html">Nosotros</a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="contacto.html">Contacto</a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="login.html">Login</a>
+    </li>
+
+    </ul>
+
+    </div>
+
+    </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+    <div class="overlay">
+
+    <h1>Midnight Café</h1>
+
+    <p>
+    El sabor perfecto
+    </p>
+
+    <a href="menu.html" class="btn btn-light btn-lg">
+    Ver Menú
+    </a>
+
+    </div>
+
+    </header>
+
+    <!-- BUSCADOR -->
+
+    <section class="container mt-5">
+
+    <div class="row">
+
+    <div class="col-md-8">
+
+    <h2>Productos Populares</h2>
+
+    </div>
+
+    <div class="col-md-4">
+
+    <input
+    type="text"
+    class="form-control"
+    id="buscador"
+    placeholder="Buscar producto..."
+    >
+
+    </div>
+
+    </div>
+
+    </section>
+
+    <!-- PRODUCTOS -->
+
+    <section class="container mt-4">
+
+    <div class="row" id="contenedorProductos">
+
+    <!-- Producto 1 -->
+
+    <div class="col-md-3 mb-4 producto">
+
+    <div class="card product-card h-100">
+
+    <img
+    src="Imagenes/frozen-dark-chocolate-mocha-8.png"
+    class="card-img-top">
+
+    <div class="card-body text-center">
+
+    <h5>Dark Chocolate</h5>
+
+    <p>$5.99</p>
+
+    <button
+    class="btn btn-dark"
+    onclick="agregarCarrito('Dark Chocolate',5.99)">
+    Agregar
+    </button>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <!-- Producto 2 -->
+
+    <div class="col-md-3 mb-4 producto">
+
+    <div class="card product-card h-100">
+
+    <img
+    src="Imagenes/milk-tea-570.png"
+    class="card-img-top">
+
+    <div class="card-body text-center">
+
+    <h5>Milk Tea</h5>
+
+    <p>$4.99</p>
+
+    <button
+    class="btn btn-dark"
+    onclick="agregarCarrito('Milk Tea',4.99)">
+    Agregar
+    </button>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <!-- Producto 3 -->
+
+    <div class="col-md-3 mb-4 producto">
+
+    <div class="card product-card h-100">
+
+    <img
+    src="Imagenes/sakura_latte.png"
+    class="card-img-top">
+
+    <div class="card-body text-center">
+
+    <h5>Sakura Latte</h5>
+
+    <p>$6.99</p>
+
+    <button
+    class="btn btn-dark"
+    onclick="agregarCarrito('Sakura Latte',6.99)">
+    Agregar
+    </button>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <!-- Producto 4 -->
+
+    <div class="col-md-3 mb-4 producto">
+
+    <div class="card product-card h-100">
+
+    <img
+    src="Imagenes/rose-latte-hot-or-iced-1.jpg"
+    class="card-img-top">
+
+    <div class="card-body text-center">
+
+    <h5>Misty Rose</h5>
+
+    <p>$5.50</p>
+
+    <button
+    class="btn btn-dark"
+    onclick="agregarCarrito('Misty Rose',5.50)">
+    Agregar
+    </button>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+    <!-- PRODUCTO DESTACADO -->
+
+    <section class="destacado mt-5">
+
+    <div class="container">
+
+    <div class="row align-items-center">
+
+    <div class="col-md-8">
+
+    <h2>Nuevo Producto</h2>
+
+    <p>
+    Descubre nuestra nueva bebida inspirada
+    en los cerezos japoneses.
+    </p>
+
+    </div>
+
+    <div class="col-md-4">
+
+    <div class="card">
+
+    <div class="card-body text-center">
+
+    <h4>Sakura Premium</h4>
+
+    <p>$7.99</p>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+    <!-- VIDEO -->
+
+    <section class="container mt-5">
+
+    <h2>Conoce Nuestra Cafetería</h2>
+
+    <div class="ratio ratio-16x9">
+
+    <iframe
+    src="video/From Klickpin.com- Quick Wedding Aisle Ideas That Are All Over Pinterest-pin-id-105553185012423894.mp4"
+    allowfullscreen>
+    </iframe>
+
+    </div>
+
+    </section>
+
+    <!-- AUDIO -->
+
+    <section class="container mt-5 text-center">
+
+    <h2>Música Ambiental</h2>
+
+    <audio controls>
+
+    <source
+    src="audio/lofi songs for cloudy days - the bootleg boy.mp3"
+    type="audio/mpeg">
+
+    </audio>
+
+    </section>
+
+    <!-- TABLA -->
+
+    <section class="container mt-5">
+
+    <h2>Horarios</h2>
+
+    <table class="table table-bordered">
+
+    <thead>
+
+    <tr>
+
+    <th>Día</th>
+    <th>Horario</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+    <td>Lunes - Viernes</td>
+    <td>8:00 AM - 8:00 PM</td>
+    </tr>
+
+    <tr>
+    <td>Sábado</td>
+    <td>9:00 AM - 9:00 PM</td>
+    </tr>
+
+    <tr>
+    <td>Domingo</td>
+    <td>10:00 AM - 6:00 PM</td>
+    </tr>
+
+    </tbody>
+
+    </table>
+
+    </section>
+
+    <!-- TESTIMONIOS -->
+
+    <section class="container mt-5">
+
+    <h2>Opiniones</h2>
+
+    <div class="row">
+
+    <div class="col-md-4">
+
+    <div class="card p-3">
+
+    ★★★★★
+
+    <p>
+    Excelente servicio.
+    </p>
+
+    </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+    <div class="card p-3">
+
+    ★★★★★
+
+    <p>
+    Las bebidas son increíbles.
+    </p>
+
+    </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+    <div class="card p-3">
+
+    ★★★★★
+
+    <p>
+    Ambiente relajante.
+    </p>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer mt-5">
+
+    <div class="container text-center">
+
+    <h4>Midnight Café</h4>
+
+    <p>
+    Inspirado en la cultura japonesa.
+    </p>
+
+    <div>
+
+    <i class="bi bi-facebook fs-3"></i>
+
+    <i class="bi bi-instagram fs-3 mx-3"></i>
+
+    <i class="bi bi-whatsapp fs-3"></i>
+
+    </div>
+
+    <p class="mt-3">
+
+    © 2026 Midnight Café
+
+    </p>
+
+    </div>
+
+    </footer>
+
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

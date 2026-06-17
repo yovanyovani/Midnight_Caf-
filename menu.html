@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="Imagenes/logo.jpg">
+
+<title>Menú | Midnight Café</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos.CSS">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+<div class="container">
+
+
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+    <img
+    src="Imagenes/logo.jpg"
+    alt="Logo Midnight Café"
+    class="logo-navbar">
+
+    <span class="ms-2">
+        Midnight Café
+    </span>
+
+    </a>
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menuNavbar">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menuNavbar">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Inicio</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="menu.html">Menú</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="carrito.html">
+Carrito
+<span id="contadorCarrito" class="badge bg-danger">0</span>
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="login.html">Login</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>Nuestro Menú</h1>
+
+<p>
+Descubre nuestras bebidas y postres
+</p>
+
+</div>
+
+</section>
+
+<!-- FILTROS -->
+
+<section class="container mt-5">
+
+<div class="row">
+
+<div class="col-md-4">
+
+<select
+class="form-select"
+id="categoriaFiltro">
+
+<option value="todos">
+Todas las categorías
+</option>
+
+<option value="calientes">
+Bebidas Calientes
+</option>
+
+<option value="frias">
+Bebidas Frías
+</option>
+
+<option value="postres">
+Postres
+</option>
+
+</select>
+
+</div>
+
+<div class="col-md-8">
+
+<input
+type="text"
+class="form-control"
+id="buscadorMenu"
+placeholder="Buscar producto..."
+>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTOS -->
+
+<section class="container mt-5">
+
+<div class="row" id="productosMenu">
+
+<!-- PRODUCTO 1 -->
+
+<div
+class="col-md-3 mb-4 producto-menu"
+data-categoria="calientes">
+
+<div class="card product-card h-100">
+
+<img
+src="Imagenes/sakura_latte.png"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Sakura Latte</h5>
+
+<p>$6.99</p>
+
+<button
+class="btn btn-dark mb-2"
+onclick="agregarCarrito('Sakura Latte',6.99)">
+Agregar
+</button>
+
+<button
+class="btn btn-outline-dark"
+data-bs-toggle="modal"
+data-bs-target="#modalLatte">
+Detalles
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCTO 2 -->
+
+<div
+class="col-md-3 mb-4 producto-menu"
+data-categoria="calientes">
+
+<div class="card product-card h-100">
+
+<img
+src="Imagenes/COPA-CAPUCHINO-220.jpg"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Cappuccino</h5>
+
+<p>$5.99</p>
+
+<button
+class="btn btn-dark mb-2"
+onclick="agregarCarrito('Cappuccino',5.99)">
+Agregar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCTO 3 -->
+
+<div
+class="col-md-3 mb-4 producto-menu"
+data-categoria="frias">
+
+<div class="card product-card h-100">
+
+<img
+src="Imagenes/milk-tea-570.png"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Milk Tea</h5>
+
+<p>$4.99</p>
+
+<button
+class="btn btn-dark mb-2"
+onclick="agregarCarrito('Milk Tea',4.99)">
+Agregar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCTO 4 -->
+
+<div
+class="col-md-3 mb-4 producto-menu"
+data-categoria="frias">
+
+<div class="card product-card h-100">
+
+<img
+src="Imagenes/rose-latte-hot-or-iced-1.jpg"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Misty Rose</h5>
+
+<p>$5.50</p>
+
+<button
+class="btn btn-dark mb-2"
+onclick="agregarCarrito('Misty Rose',5.50)">
+Agregar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCTO 5 -->
+
+<div
+class="col-md-3 mb-4 producto-menu"
+data-categoria="postres">
+
+<div class="card product-card h-100">
+
+<img
+src="Imagenes/cheesecake.png"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Cheesecake</h5>
+
+<p>$4.50</p>
+
+<button
+class="btn btn-dark mb-2"
+onclick="agregarCarrito('Cheesecake',4.50)">
+Agregar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCTO 6 -->
+
+<div
+class="col-md-3 mb-4 producto-menu"
+data-categoria="postres">
+
+<div class="card product-card h-100">
+
+<img
+src="Imagenes/sakura_donut.png"
+class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5>Donut Sakura</h5>
+
+<p>$3.99</p>
+
+<button
+class="btn btn-dark mb-2"
+onclick="agregarCarrito('Donut Sakura',3.99)">
+Agregar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MODAL -->
+
+<div
+class="modal fade"
+id="modalLatte">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5>Sakura Latte</h5>
+
+<button
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<img
+src="Imagenes/sakura_latte.png"
+class="img-fluid mb-3">
+
+<p>
+
+Deliciosa bebida inspirada en
+la flor de cerezo japonesa.
+
+</p>
+
+<p>
+
+Precio: $6.99
+
+</p>
+
+</div>
+
+<div class="modal-footer">
+
+<button
+class="btn btn-secondary"
+data-bs-dismiss="modal">
+Cerrar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCTO DESTACADO -->
+
+<section class="destacado mt-5">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-md-8">
+
+<h2>Especial del Mes</h2>
+
+<p>
+
+Prueba nuestro Sakura Premium
+con descuento especial.
+
+</p>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card">
+
+<div class="card-body text-center">
+
+<h4>Sakura Premium</h4>
+
+<p>$7.99</p>
+
+<button
+class="btn btn-dark"
+onclick="agregarCarrito('Sakura Premium',7.99)">
+Agregar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer mt-5">
+
+<div class="container text-center">
+
+<h4> Midnight Café</h4>
+
+<p>
+
+Las mejores bebidas japonesas.
+
+</p>
+
+<div>
+
+<i class="bi bi-facebook fs-3"></i>
+
+<i class="bi bi-instagram fs-3 mx-3"></i>
+
+<i class="bi bi-whatsapp fs-3"></i>
+
+</div>
+
+<p class="mt-3">
+
+© 2026 Midnight Café
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* FILTRO CATEGORIAS */
+
+const filtro =
+document.getElementById(
+"categoriaFiltro"
+);
+
+if(filtro){
+
+filtro.addEventListener(
+"change",
+function(){
+
+let categoria =
+this.value;
+
+let productos =
+document.querySelectorAll(
+".producto-menu"
+);
+
+productos.forEach(producto=>{
+
+if(
+categoria === "todos"
+){
+
+producto.style.display =
+"block";
+
+}
+else{
+
+producto.style.display =
+
+producto.dataset.categoria
+=== categoria
+
+? "block"
+
+: "none";
+
+}
+
+});
+
+});
+}
+
+/* BUSCADOR */
+
+const buscadorMenu =
+document.getElementById(
+"buscadorMenu"
+);
+
+if(buscadorMenu){
+
+buscadorMenu.addEventListener(
+"keyup",
+function(){
+
+let texto =
+this.value.toLowerCase();
+
+let productos =
+document.querySelectorAll(
+".producto-menu"
+);
+
+productos.forEach(producto=>{
+
+producto.style.display =
+
+producto.textContent
+.toLowerCase()
+.includes(texto)
+
+? "block"
+
+: "none";
+
+});
+
+});
+}
+
+</script>
+
+</body>
+</html>

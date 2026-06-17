@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto | Midnight Café</title>
+
+<link rel="icon" href="Imagenes/logo.jpg">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos.CSS">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+<div class="container">
+
+
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+    <img
+    src="Imagenes/logo.jpg"
+    alt="Logo Midnight Café"
+    class="logo-navbar">
+
+    <span class="ms-2">
+        Midnight Café
+    </span>
+
+    </a>
+
+</div>
+
+</nav>
+
+<div class="container py-5">
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<div class="contact-card">
+
+<h2>Contáctanos</h2>
+
+<form onsubmit="return enviarContacto()">
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Nombre
+
+</label>
+
+<input
+type="text"
+id="nombreContacto"
+class="form-control"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Correo
+
+</label>
+
+<input
+type="email"
+id="correoContacto"
+class="form-control"
+required>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Mensaje
+
+</label>
+
+<textarea
+id="mensajeContacto"
+class="form-control"
+rows="5"
+required>
+</textarea>
+
+</div>
+
+<button
+type="submit"
+class="btn btn-dark">
+
+Enviar
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<h2>Ubicación</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=Tokyo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="400">
+
+</iframe>
+
+<div class="mt-4">
+
+<h4>Información</h4>
+
+<p>
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Tokio, Japón
+
+</p>
+
+<p>
+
+<i class="bi bi-telephone-fill"></i>
+
++81 123 456 789
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope-fill"></i>
+
+info@midnightcafe.com
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="container text-center">
+
+<h4>Midnight Café</h4>
+
+<p>
+
+Síguenos en nuestras redes.
+
+</p>
+
+<div>
+
+<i class="bi bi-facebook fs-3"></i>
+
+<i class="bi bi-instagram fs-3 mx-3"></i>
+
+<i class="bi bi-whatsapp fs-3"></i>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="app.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
